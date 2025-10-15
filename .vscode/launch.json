@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "RedRoverCodePuzzle Debug",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "dotnet: build",
+            "program": "${workspaceFolder}/RedRoverCodePuzzle/bin/Debug/net9.0/RedRoverCodePuzzle.dll ",
+            "args": [
+                "(id, name, email, type(id, name, customFields(c1, c2, c3)), externalId)",
+                "none"
+            ],
+            "console": "internalConsole"
+        }
+    ]
+}
