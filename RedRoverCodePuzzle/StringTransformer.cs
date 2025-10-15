@@ -114,7 +114,6 @@ public class StringTransformer
     {
         _input = _input.Trim();
 
-        // While input string is wrapped in a NodeChildrenStart and NodeChildrenEnd unwrap it.
         // We always assume and create exactly one _rootNode when instantiating a StringTransformer object, so additional root level wrapping is unnecessary.
         while (_input.Length > 0 && _input[0].Equals(NodeChildrenStart) && _input[^1].Equals(NodeChildrenEnd))
         {
