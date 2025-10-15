@@ -32,20 +32,20 @@ public class Node
         foreach (var childNode in Children)
         {
             string indent = new(' ', indentSpaceCount * currentNestingLevel);
-            string childResult = indent + itemPrefix + childNode.Value;
+            string childDisplayValue = indent + itemPrefix + childNode.Value;
 
-            if (!string.IsNullOrWhiteSpace(childResult))
+            if (!string.IsNullOrWhiteSpace(childDisplayValue))
             {
-                outputBuilder.AppendLine(childResult);
+                outputBuilder.AppendLine(childDisplayValue);
             }
 
             currentNestingLevel++;
-            var grandchildDescendantsOutput = childNode.DescendantsToString(itemPrefix, indentSpaceCount, currentNestingLevel);
+            var grandchildDescendantsDisplayValue = childNode.DescendantsToString(itemPrefix, indentSpaceCount, currentNestingLevel);
             currentNestingLevel--;
 
-            if (!string.IsNullOrWhiteSpace(grandchildDescendantsOutput))
+            if (!string.IsNullOrWhiteSpace(grandchildDescendantsDisplayValue))
             {
-                outputBuilder.Append(grandchildDescendantsOutput);
+                outputBuilder.Append(grandchildDescendantsDisplayValue);
             }
         }
 
