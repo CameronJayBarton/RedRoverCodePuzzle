@@ -23,7 +23,7 @@ public class AlphabeticalAscendingFullTraversalSort : ISortingStrategy
 {
     public void Sort(Node node)
     {
-        IComparer<Node> comparer = new SortByValueAlphabeticalAscending();
+        var comparer = new SortByValueAlphabeticalAscending();
 
         node.Children.Sort(comparer);
 
